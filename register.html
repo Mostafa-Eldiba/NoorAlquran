@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+      <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Pacifico&display=swap"
+    rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            background: #f8f9fa;
+        }
+
+        .auth-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .nav-tabs {
+            border: none;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .nav-link {
+            border: none !important;
+            color: #6c757d;
+            font-weight: 500;
+            padding: 1rem 2rem;
+            transition: all 0.3s;
+        }
+
+        .nav-link.active {
+            color: #f1c152;
+            border-bottom: 3px solid #f1c152!important;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #f1c152;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .loading-spinner {
+            display: none;
+            color: #f1c152;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="auth-container d-flex align-items-center">
+        <div class="container">
+            <div class="auth-card card">
+                <!-- Tabs Navigation -->
+                <ul class="nav nav-tabs" id="authTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="login-tab" data-bs-toggle="tab" 
+                                data-bs-target="#login" type="button" role="tab" 
+                                aria-controls="login" aria-selected="true">
+                            Login
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="register-tab" data-bs-toggle="tab" 
+                                data-bs-target="#register" type="button" role="tab" 
+                                aria-controls="register" aria-selected="false">
+                            Register
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content p-4">
+                    <!-- Login Tab -->
+                    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3 position-relative">
+                                <label class="form-label">Password</label>
+                                <input type="password" name="password" id="loginPassword" class="form-control" required>
+                                <i class="fas fa-eye password-toggle" onclick="togglePassword('loginPassword')"></i>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <a href="#forgotPassword" class="text-decoration-none" 
+                                   data-bs-toggle="modal">Forgot Password?</a>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">
+                                <span class="submit-text">Sign In</span>
+                                <span class="loading-spinner">
+                                    <i class="fas fa-spinner fa-spin"></i> Authenticating...
+                                </span>
+                            </button>
+
+                            <div class="text-center mt-3">
+                                <p>Don't have an account? 
+                                    <a href="#" class="text-decoration-none" 
+                                       onclick="switchTab('register-tab')">Create new account</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Register Tab -->
+                    <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                        <form id="registrationForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" name="name" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" name="email" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" name="phone" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" name="password" class="form-control" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label">Address</label>
+                                    <textarea name="address" class="form-control" rows="2"></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <p class="form-label">Select Role</p>
+                                    <div class="d-flex gap-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="role" 
+                                                   id="student" value="3" required>
+                                            <label class="form-check-label" for="student">
+                                                Student
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="role" 
+                                                   id="teacher" value="2" required>
+                                            <label class="form-check-label" for="teacher">
+                                                Teacher
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 mt-3">
+                                        <span class="submit-text">Create Account</span>
+                                        <span class="loading-spinner">
+                                            <i class="fas fa-spinner fa-spin"></i> Processing...
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-3">
+                                <p>Already have an account? 
+                                    <a href="#" class="text-decoration-none" 
+                                       onclick="switchTab('login-tab')">Login here</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div class="modal fade" id="forgotPassword" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Reset Password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="forgotPasswordForm">
+                        <div class="mb-3">
+                            <label class="form-label">Enter your email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            Send Reset Link
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Switch between tabs
+        function switchTab(tabId) {
+            const triggerEl = document.querySelector(`#${tabId}`);
+            bootstrap.Tab.getInstance(triggerEl)?.show();
+        }
+
+        // Toggle password visibility
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            input.type = input.type === 'password' ? 'text' : 'password';
+        }
+
+        // Handle form submissions
+        $(document).ready(function() {
+            // Login Form
+            $('#loginForm').submit(function(e) {
+                e.preventDefault();
+                const $btn = $(this).find('button[type="submit"]');
+                toggleLoading($btn, true);
+                
+                // Simulate API call
+                setTimeout(() => {
+                    toggleLoading($btn, false);
+                    alert('Login successful!');
+                }, 1500);
+            });
+
+            // Registration Form
+            $('#registrationForm').submit(function(e) {
+                e.preventDefault();
+                const $btn = $(this).find('button[type="submit"]');
+                toggleLoading($btn, true);
+                
+                // Simulate API call
+                setTimeout(() => {
+                    toggleLoading($btn, false);
+                    alert('Registration successful!');
+                }, 1500);
+            });
+
+            function toggleLoading(button, isLoading) {
+                button.prop('disabled', isLoading);
+                button.find('.submit-text').toggle(!isLoading);
+                button.find('.loading-spinner').toggle(isLoading);
+            }
+        });
+    </script>
+</body>
+</html>

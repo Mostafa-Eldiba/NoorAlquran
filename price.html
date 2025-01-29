@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Prices - Nour Al-Qur’an Academy</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <style>
+    /* hero */
+    .hero-header {
+      margin-bottom: 0;
+    }
+    /* footer */
+    .footer {
+      margin-top: 0;
+    }
+    /* price */
+    .price {
+      background: #fbf2db;
+    }
+    .pricing-card {
+      background: white;
+      padding: 2rem;
+      text-align: center;
+      color: #f1c152;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .pricing-card h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f1c152;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-card p {
+      color: black;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-card ul li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #e2e8f0;
+      color: black;
+    }
+
+    .pricing-card ul li:last-child {
+      border-bottom: none;
+    }
+
+    @media (max-width: 768px) {
+      .price h1 {
+        font-size: 2rem;
+      }
+
+      .pricing-card {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .price .row {
+      --bs-gutter-x: 1rem; /* زيادة المسافة الأفقية بين الكروت */
+    }
+
+    .pricing-card {
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 992px) {
+      .pricing-card {
+        margin-bottom: 0;
+        margin-right: calc(var(--bs-gutter-x) * 0.5);
+        margin-left: calc(var(--bs-gutter-x) * 0.5);
+      }
+    }
+
+    @media (min-width: 992px) {
+      .price .row {
+        flex-wrap: nowrap;
+        justify-content: center;
+      }
+    }
+  </style>
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar start -->
+    <div class="container-fluid fixed-top">
+      <div class="container topbar d-none d-lg-block">
+        <div class="topbar-inner">
+          <div class="row gx-0">
+            <div class="col-lg-7 text-start">
+              <div class="h-100 d-inline-flex align-items-center me-4">
+                <span class="fa fa-phone-alt me-2 text-dark"></span>
+                <a href="#" class="text-secondary"><span>+01114890641</span></a>
+              </div>
+              <div class="h-100 d-inline-flex align-items-center">
+                <span class="far fa-envelope me-2 text-dark"></span>
+                <a href="#" class="text-secondary"
+                  ><span>info@MmSoftwareGroup.com</span></a
+                >
+              </div>
+            </div>
+            <div class="col-lg-5 text-end">
+              <div class="h-100 d-inline-flex align-items-center">
+                <span class="text-body">Follow Us:</span>
+                <a class="text-dark px-2" href=""
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="text-dark px-2" href=""
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="text-dark px-2" href=""
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a class="text-dark px-2" href=""
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a class="text-body ps-4" href="register.html"
+                  ><i class="fa fa-lock text-dark me-1"></i> Signup/login</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <nav class="navbar navbar-light navbar-expand-lg py-3">
+          <a href="index.html" class="navbar-brand">
+            <h1 class="mb-0">Noor <span class="text-primary">Al-qran</span></h1>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="fa fa-bars text-primary"></span>
+          </button>
+          <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+            <div class="navbar-nav ms-lg-auto mx-xl-auto">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="about.html" class="nav-item nav-link">About</a>
+              <a href="courses.html" class="nav-item nav-link">Courses</a>
+              <a href="price.html" class="nav-item nav-link active">Pricing</a>
+              <div class="nav-item dropdown">
+                <a
+                  href="blog.html"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  >Pages</a
+                >
+                <div class="dropdown-menu m-0 rounded-0">
+                  <a href="blog.html" class="dropdown-item">Latest Blog</a>
+                  <a href="team.html" class="dropdown-item">Our Team</a>
+                  <a href="testimonial.html" class="dropdown-item"
+                    >Testimonial</a
+                  >
+                </div>
+              </div>
+              <a href="contact.html" class="nav-item nav-link">Contact us</a>
+              <div class="nav-item dropdown">
+                <a
+                  href="listening-quran.html"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  >More</a
+                >
+                <div class="dropdown-menu m-0 rounded-0">
+                  <a href="listening-quran.html" class="dropdown-item"
+                    >Listening to the quran</a
+                  >
+                  <a href="sermon.html" class="dropdown-item">sermon</a>
+                </div>
+              </div>
+            </div>
+            <a
+              href="free_trial.html"
+              class="btn btn-primary py-2 px-4 d-none d-xl-inline-block"
+              >Free Trial</a
+            >
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Hero Start -->
+    <div class="container-fluid hero-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="hero-header-inner animated zoomIn">
+              <h1 class="display-1 text-dark">Pricing</h1>
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item">
+                  <a href="testimonial.html">Pages</a>
+                </li>
+                <li class="breadcrumb-item text-dark" aria-current="page">
+                  Pricing
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Start Whatsapp -->
+    <a
+      href="https://api.whatsapp.com/send?phone=201092401219&amp;text=Hello,%20I%20want%20to%20learn%20Quran%20online"
+      class="join-chat"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <i class="fab fa-whatsapp join-chat-button"></i>
+    </a>
+    <!-- End Whatsapp -->
+
+    <!-- price -->
+    <section class="container-fluid price py-5">
+      <div class="container py-5">
+        <h1 class="display-3 mb-3 wow fadeIn" data-wow-delay="0.1s">
+          <span class="text-primary" style="color: #ffad05">Pricing</span>
+        </h1>
+        <p style="color: black; margin-bottom: 30px; font-size: 18px">
+          You can choose from the following timings and days according to your
+          choice and convenience at our Noor Al Quran Academy, and can also opt
+          for weekend courses/classes. After 3 days of free trial classes, you
+          can take full advantage of the family discount. You can also schedule
+          your desired timings and days, even if they are not mentioned here.
+        </p>
+        <div
+          class="row price fadeIn"
+          data-wow-delay="0.1s"
+          style="line-height: 3"
+        >
+          <!-- Card 1: -->
+          <div class="col-lg-4 col-md-6 mb-3 pricing-card">
+            <h2>26GBP PER MONTH PER STUDENT</h2>
+            <p>4 Days in a week</p>
+            <svg
+              aria-hidden="true"
+              class="e-font-icon-svg e-far-check-circle"
+              viewBox="0 0 512 512"
+              width="50"
+              fill="#ffad05"
+              height="50"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"
+              ></path>
+            </svg>
+            <ul>
+              <li>16 Classes Per Month</li>
+              <li>One to One Live Class</li>
+              <li>30 Minutes/Live Session</li>
+            </ul>
+            <a href="register.html"
+              ><button class="btn btn-primary px-3 py-2">Book Now</button></a
+            >
+          </div>
+
+          <!-- Card 2: -->
+          <div class="col-lg-4 col-md-6 mb-3 pricing-card">
+            <h2>23GBP PER MONTH PER STUDENT</h2>
+            <p>4 Days in a week</p>
+            <svg
+              aria-hidden="true"
+              class="e-font-icon-svg e-far-check-circle"
+              viewBox="0 0 512 512"
+              width="50"
+              fill="#ffad05"
+              height="50"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"
+              ></path>
+            </svg>
+            <ul>
+              <li>12 Classes Per Month</li>
+              <li>One to One Live Class</li>
+              <li>30 Minutes/Live Session</li>
+            </ul>
+            <a href="free_trial.html"
+              ><button class="btn btn-primary px-3 py-2">
+                Claim Free Trial
+              </button></a
+            >
+          </div>
+
+          <!-- Card 3: -->
+          <div class="col-lg-4 col-md-6 mb-3 pricing-card">
+            <h2>20GBP PER MONTH PER STUDENT 2 Days</h2>
+            <p>Weekdays/Weekends</p>
+            <svg
+              aria-hidden="true"
+              class="e-font-icon-svg e-far-check-circle"
+              viewBox="0 0 512 512"
+              width="50"
+              fill="#ffad05"
+              height="50"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"
+              ></path>
+            </svg>
+            <ul>
+              <li>8 Classes Per Month</li>
+              <li>One to One Live Class</li>
+              <li>30 Minutes/Live Session</li>
+            </ul>
+            <a href="register.html"
+              ><button class="btn btn-primary px-3 py-2">
+                Register Now
+              </button></a
+            >
+          </div>
+        </div>
+
+        <!-- title whole -->
+        <div class="title-whole" style="padding: 50 0; text-align: center">
+          <img
+            src="img/title-whoil.jpg"
+            alt="image-title"
+            style="width: 50%; height: 50%; padding: 50px 0"
+          />
+          <h2 class="title">Are you interested in Trial Session?</h2>
+          <p style="margin: 30px 0">
+            we offer 3 days free trial classes where our new registrar can
+            experience our online teaching methodology and service and it is
+            absolutely free. After free lessons you continue to learn Quran
+            online with us or decide to keep or stop.
+          </p>
+          <a href="free_trial.html">
+            <button class="btn btn-primary px-3 py-2">
+              BOOK 3-DAYS FREE TRIAL
+              <svg
+                aria-hidden="true"
+                class="e-font-icon-svg e-fas-arrow-right"
+                viewBox="0 0 448 512"
+                width="20"
+                fill="black"
+                height="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
+                ></path>
+              </svg>
+            </button>
+          </a>
+          <style>
+            button:hover svg {
+              fill: #f1c152;
+            }
+          </style>
+        </div>
+      </div>
+    </section>
+    <!-- price -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer pt-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container py-5">
+        <div class="row py-5">
+          <div class="col-lg-7">
+            <h1 class="text-light mb-0">Subscribe our newsletter</h1>
+            <p class="text-secondary">Get the latest news and other tips</p>
+          </div>
+          <div class="col-lg-5">
+            <div class="position-relative mx-auto">
+              <input
+                class="form-control border-0 w-100 py-3 ps-4 pe-5"
+                type="text"
+                placeholder="Your email"
+              />
+              <button
+                type="button"
+                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+              >
+                Subcribe
+              </button>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="border-top border-secondary"></div>
+          </div>
+        </div>
+        <div class="row g-4 footer-inner">
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item mt-5">
+              <h4 class="text-light mb-4">
+                Noor<span class="text-primary"> Al-Quran</span>
+              </h4>
+              <p class="mb-4 text-secondary">
+                Noor Al-Quran" is a website that helps beginners learn to read
+                the Quran in Arabic. It offers interactive lessons, audio
+                recitations, and focuses on letters and pronunciation. Perfect
+                for starting your Quranic journey.
+              </p>
+              <a href="free_trial.html" class="btn btn-primary py-2 px-4"
+                >Free Trial Now</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item mt-5">
+              <h4 class="text-light mb-4">Our Noor Al-quran</h4>
+              <div class="d-flex flex-column">
+                <h6 class="text-secondary mb-0">Our Address</h6>
+                <div class="d-flex align-items-center border-bottom py-4">
+                  <span class="flex-shrink-0 btn-square bg-primary me-3 p-4"
+                    ><i class="fa fa-map-marker-alt text-dark"></i
+                  ></span>
+                  <a href="" class="text-body">123 Street, New York, USA</a>
+                </div>
+                <h6 class="text-secondary mt-4 mb-0">Our Mobile</h6>
+                <div class="d-flex align-items-center py-4">
+                  <span class="flex-shrink-0 btn-square bg-primary me-3 p-4"
+                    ><i class="fa fa-phone-alt text-dark"></i
+                  ></span>
+                  <a href="" class="text-body">+01114890641</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item mt-5">
+              <h4 class="text-light mb-4">Explore Link</h4>
+              <div class="d-flex flex-column align-items-start">
+                <a class="text-body mb-2" href="index.html"
+                  ><i class="fa fa-check text-primary me-2"></i>Home</a
+                >
+                <a class="text-body mb-2" href="about.html"
+                  ><i class="fa fa-check text-primary me-2"></i>About Us</a
+                >
+                <a class="text-body mb-2" href="courses.html"
+                  ><i class="fa fa-check text-primary me-2"></i>Courses</a
+                >
+                <a class="text-body mb-2" href="contact.html"
+                  ><i class="fa fa-check text-primary me-2"></i>Contact us</a
+                >
+                <a class="text-body mb-2" href="blog.html"
+                  ><i class="fa fa-check text-primary me-2"></i>Our Blog</a
+                >
+                <a class="text-body mb-2" href="price.html"
+                  ><i class="fa fa-check text-primary me-2"></i>Pricing</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item mt-5">
+              <h4 class="text-light mb-4">Latest Post</h4>
+              <div class="d-flex border-bottom border-secondary py-4">
+                <img
+                  src="img/blog-mini-1.jpg"
+                  class="img-fluid flex-shrink-0"
+                  alt=""
+                />
+                <div class="ps-3">
+                  <p class="mb-0 text-muted">01 Jan 2024</p>
+                  <a href="blog-more-7.html" class="text-body"
+                    >Which Surah has Two Bismillah?</a
+                  >
+                </div>
+              </div>
+              <div class="d-flex py-4">
+                <img
+                  src="img/blog-mini-2.jpg"
+                  class="img-fluid flex-shrink-0"
+                  alt=""
+                />
+                <div class="ps-3">
+                  <p class="mb-0 text-muted">01 Jan 2024</p>
+                  <a href="blog-more-8.html" class="text-body"
+                    >Why Do Muslims Memorize The Quran</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container py-4">
+        <div class="border-top border-secondary pb-4"></div>
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; <a class="border-bottom" href="index.html">Noor Al-Quran</a>,
+            All Right Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            Designed By <a class="border-bottom" href="">MM Software Group</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-3 border-light back-to-top"
+      ><i class="fa fa-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

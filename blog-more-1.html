@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Blog - Nour Al-Qur’an Academy</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <style>
+    /* hero */
+    .hero-header {
+      margin-bottom: 0;
+    }
+    /* footer */
+    .footer {
+      margin-top: 0;
+    }
+    .article-content {
+      line-height: 1.8;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .article-section {
+      margin-bottom: 50px;
+      padding: 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-title {
+      color: #2c5f2d;
+      border-left: 4px solid #2c5f2d;
+      padding-left: 15px;
+      margin-bottom: 25px;
+    }
+
+    .quran-tip {
+      background: #f8f9fa;
+      border-left: 4px solid #2c5f2d;
+      padding: 20px;
+      margin: 25px 0;
+    }
+
+    .step-number {
+      background: #2c5f2d;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .article-content {
+        font-size: 1rem;
+      }
+
+      .article-section {
+        padding: 20px;
+      }
+    }
+  </style>
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar start -->
+    <div class="container-fluid fixed-top">
+      <div class="container topbar d-none d-lg-block">
+        <div class="topbar-inner">
+          <div class="row gx-0">
+            <div class="col-lg-7 text-start">
+              <div class="h-100 d-inline-flex align-items-center me-4">
+                <span class="fa fa-phone-alt me-2 text-dark"></span>
+                <a href="#" class="text-secondary"><span>+01114890641</span></a>
+              </div>
+              <div class="h-100 d-inline-flex align-items-center">
+                <span class="far fa-envelope me-2 text-dark"></span>
+                <a href="#" class="text-secondary"
+                  ><span>info@MmSoftwareGroup.com</span></a
+                >
+              </div>
+            </div>
+            <div class="col-lg-5 text-end">
+              <div class="h-100 d-inline-flex align-items-center">
+                <span class="text-body">Follow Us:</span>
+                <a class="text-dark px-2" href=""
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="text-dark px-2" href=""
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="text-dark px-2" href=""
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a class="text-dark px-2" href=""
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a class="text-body ps-4" href="register.html"
+                  ><i class="fa fa-lock text-dark me-1"></i> Signup/login</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <nav class="navbar navbar-light navbar-expand-lg py-3">
+          <a href="index.html" class="navbar-brand">
+            <h1 class="mb-0">Noor <span class="text-primary">Al-qran</span></h1>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="fa fa-bars text-primary"></span>
+          </button>
+          <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+            <div class="navbar-nav ms-lg-auto mx-xl-auto">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="about.html" class="nav-item nav-link">About</a>
+              <a href="courses.html" class="nav-item nav-link">Courses</a>
+              <a href="price.html" class="nav-item nav-link">Pricing</a>
+              <div class="nav-item dropdown">
+                <a
+                  href="blog.html"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  >Pages</a
+                >
+                <div class="dropdown-menu m-0 rounded-0">
+                  <a href="blog.html" class="dropdown-item active"
+                    >Latest Blog</a
+                  >
+                  <a href="team.html" class="dropdown-item">Our Team</a>
+                  <a href="testimonial.html" class="dropdown-item"
+                    >Testimonial</a
+                  >
+                </div>
+              </div>
+              <a href="contact.html" class="nav-item nav-link">Contact us</a>
+              <div class="nav-item dropdown">
+                <a
+                  href="listening-quran.html"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  >More</a
+                >
+                <div class="dropdown-menu m-0 rounded-0">
+                  <a href="listening-quran.html" class="dropdown-item"
+                    >Listening to the quran</a
+                  >
+                  <a href="sermon.html" class="dropdown-item">sermon</a>
+                </div>
+              </div>
+            </div>
+            <a
+              href="free_trial.html"
+              class="btn btn-primary py-2 px-4 d-none d-xl-inline-block"
+              >Free Trial</a
+            >
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Hero Start -->
+    <div class="container-fluid hero-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="hero-header-inner animated zoomIn">
+              <h1 class="display-1 text-dark">Blog</h1>
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item">
+                  <a href="testimonial.html">Pages</a>
+                </li>
+                <li class="breadcrumb-item text-dark" aria-current="page">
+                  Blog
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Start Whatsapp -->
+    <a
+      href="https://api.whatsapp.com/send?phone=201092401219&amp;text=Hello,%20I%20want%20to%20learn%20Quran%20online"
+      class="join-chat"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <i class="fab fa-whatsapp join-chat-button"></i>
+    </a>
+    <!-- End Whatsapp -->
+
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="article-content">
+            <!-- مقدمة -->
+            <div class="article-section animated fadeIn">
+              <h1 class="display-4 mb-4">
+                How to Read Quran in Arabic for Beginners: 2024 Guide
+              </h1>
+              <p class="lead">
+                Embarking on your Quranic journey? This comprehensive guide will
+                help you start reading Arabic Quran with confidence.
+              </p>
+
+              <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                  <div class="quran-tip">
+                    <h5>📌 Key Tip</h5>
+                    <p>
+                      Start with short surahs and gradually progress to longer
+                      ones
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <img
+                    src="img/blog-1.webp"
+                    alt="Quran Learning"
+                    class="img-fluid rounded"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- محتوى المقال -->
+            <div class="article-section">
+              <h3 class="section-title">Step-by-Step Learning Path</h3>
+
+              <!-- الخطوة 1 -->
+              <div class="d-flex align-items-center mb-4">
+                <div class="step-number">1</div>
+                <div>
+                  <h4>Learn the Arabic Alphabet</h4>
+                  <p>
+                    Master the 28 letters with proper pronunciation using our
+                    interactive charts
+                  </p>
+                </div>
+              </div>
+
+              <!-- الخطوة 2 -->
+              <div class="d-flex align-items-center mb-4">
+                <div class="step-number">2</div>
+                <div>
+                  <h4>Understand Harakat (Vowels)</h4>
+                  <p>
+                    Practice with common words:
+                    <span class="text-primary">فَتْحَة (a)</span>,
+                    <span class="text-primary">كَسْرَة (i)</span>,
+                    <span class="text-primary">ضَمَّة (u)</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- جدول الأحرف -->
+              <div class="table-responsive mb-5">
+                <table class="table table-bordered">
+                  <thead class="table-dark">
+                    <tr>
+                      <th>Letter</th>
+                      <th>Name</th>
+                      <th>Pronunciation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>ا</td>
+                      <td>Alif</td>
+                      <td>Long 'a' sound</td>
+                    </tr>
+                    <tr>
+                      <td>ب</td>
+                      <td>Ba</td>
+                      <td>'b' as in book</td>
+                    </tr>
+                    <!-- أضف المزيد من الصفوف -->
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- نصائح التلاوة -->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="quran-tip">
+                    <h5>🕋 Tajweed Essentials</h5>
+                    <ul class="list-unstyled">
+                      <li>✓ Proper elongation (Madd)</li>
+                      <li>✓ Correct stops (Waqf)</li>
+                      <li>✓ Clear articulation</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="quran-tip">
+                    <h5>📱 Tech Tools</h5>
+                    <ul class="list-unstyled">
+                      <li>▶ Quranic Arabic App</li>
+                      <li>▶ Tajweed Tutor AI</li>
+                      <li>▶ Interactive Practice</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- خاتمة -->
+              <div class="mt-5 text-center">
+                <a href="free_trial.html" class="btn btn-primary btn-lg px-5">
+                  Start Learning Now <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer pt-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container py-5">
+        <div class="row py-5">
+          <div class="col-lg-7">
+            <h1 class="text-light mb-0">Subscribe our newsletter</h1>
+            <p class="text-secondary">Get the latest news and other tips</p>
+          </div>
+          <div class="col-lg-5">
+            <div class="position-relative mx-auto">
+              <input
+                class="form-control border-0 w-100 py-3 ps-4 pe-5"
+                type="text"
+                placeholder="Your email"
+              />
+              <button
+                type="button"
+                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+              >
+                Subcribe
+              </button>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="border-top border-secondary"></div>
+          </div>
+        </div>
+        <div class="row g-4 footer-inner">
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item mt-5">
+              <h4 class="text-light mb-4">
+                Noor<span class="text-primary"> Al-Quran</span>
+              </h4>
+              <p class="mb-4 text-secondary">
+                Noor Al-Quran" is a website that helps beginners learn to read
+                the Quran in Arabic. It offers interactive lessons, audio
+                recitations, and focuses on letters and pronunciation. Perfect
+                for starting your Quranic journey.
+              </p>
+              <a href="free_trial.html" class="btn btn-primary py-2 px-4"
+                >Free Trial Now</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item mt-5">
+              <h4 class="text-light mb-4">Our Noor Al-quran</h4>
+              <div class="d-flex flex-column">
+                <h6 class="text-secondary mb-0">Our Address</h6>
+                <div class="d-flex align-items-center border-bottom py-4">
+                  <span class="flex-shrink-0 btn-square bg-primary me-3 p-4"
+                    ><i class="fa fa-map-marker-alt text-dark"></i
+                  ></span>
+                  <a href="" class="text-body">123 Street, New York, USA</a>
+                </div>
+                <h6 class="text-secondary mt-4 mb-0">Our Mobile</h6>
+                <div class="d-flex align-items-center py-4">
+                  <span class="flex-shrink-0 btn-square bg-primary me-3 p-4"
+                    ><i class="fa fa-phone-alt text-dark"></i
+                  ></span>
+                  <a href="" class="text-body">+01114890641</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item mt-5">
+              <h4 class="text-light mb-4">Explore Link</h4>
+              <div class="d-flex flex-column align-items-start">
+                <a class="text-body mb-2" href="index.html"
+                  ><i class="fa fa-check text-primary me-2"></i>Home</a
+                >
+                <a class="text-body mb-2" href="about.html"
+                  ><i class="fa fa-check text-primary me-2"></i>About Us</a
+                >
+                <a class="text-body mb-2" href="courses.html"
+                  ><i class="fa fa-check text-primary me-2"></i>Courses</a
+                >
+                <a class="text-body mb-2" href="contact.html"
+                  ><i class="fa fa-check text-primary me-2"></i>Contact us</a
+                >
+                <a class="text-body mb-2" href="blog.html"
+                  ><i class="fa fa-check text-primary me-2"></i>Our Blog</a
+                >
+                <a class="text-body mb-2" href="price.html"
+                  ><i class="fa fa-check text-primary me-2"></i>Pricing</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item mt-5">
+              <h4 class="text-light mb-4">Latest Post</h4>
+              <div class="d-flex border-bottom border-secondary py-4">
+                <img
+                  src="img/blog-mini-1.jpg"
+                  class="img-fluid flex-shrink-0"
+                  alt=""
+                />
+                <div class="ps-3">
+                  <p class="mb-0 text-muted">01 Jan 2024</p>
+                  <a href="blog-more-7.html" class="text-body"
+                    >Which Surah has Two Bismillah?</a
+                  >
+                </div>
+              </div>
+              <div class="d-flex py-4">
+                <img
+                  src="img/blog-mini-2.jpg"
+                  class="img-fluid flex-shrink-0"
+                  alt=""
+                />
+                <div class="ps-3">
+                  <p class="mb-0 text-muted">01 Jan 2024</p>
+                  <a href="blog-more-8.html" class="text-body"
+                    >Why Do Muslims Memorize The Quran</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container py-4">
+        <div class="border-top border-secondary pb-4"></div>
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; <a class="border-bottom" href="index.html">Noor Al-Quran</a>,
+            All Right Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            Designed By <a class="border-bottom" href="">MM Software Group</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-3 border-light back-to-top"
+      ><i class="fa fa-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script>
+      // تفعيل تأثيرات الظهور
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(".article-section");
+        sections.forEach((section, index) => {
+          setTimeout(() => {
+            section.style.opacity = 1;
+            section.style.transform = "translateY(0)";
+          }, index * 200);
+        });
+      });
+    </script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
