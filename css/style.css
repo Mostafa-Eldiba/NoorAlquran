@@ -538,3 +538,14 @@ h4, h5, h6, .h4, .h5, .h6 {
 }
 
 /*** Footer End ***/
+
+/* Testimonials */
+@media (max-width: 776px) {
+    .testimonial-text {
+        font-size: 0.9rem !important;
+    }
+    .owl-prev,
+    .owl-next {
+        display: none !important;
+    }
+}
