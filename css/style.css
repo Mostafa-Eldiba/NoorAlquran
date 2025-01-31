@@ -550,4 +550,11 @@ h4, h5, h6, .h4, .h5, .h6 {
     .owl-next {
         display: none !important;
     }
+    .owl-carousel .owl-item img {
+        display: none;
+    }
+    .btn-md-square {
+        top: -30px !important;
+        left: -30px !important;
+    }
 }
