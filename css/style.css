@@ -543,6 +543,8 @@ h4, h5, h6, .h4, .h5, .h6 {
 @media (max-width: 776px) {
     .testimonial-text {
         font-size: 0.9rem !important;
+        height: 185px;
+        overflow: hidden;
     }
     .owl-prev,
     .owl-next {
